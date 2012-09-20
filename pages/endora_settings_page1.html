@@ -1,6 +1,6 @@
 ﻿<h2>Nastavení reklamy</h2>
 <?php if(!is_active_widget(false, false, ENDORA_WIDGET_ID1, false)) { echo '<div id="message" class="error"><p>Byla zjištěna chyba, která nedovoluje zobrazit nastavení reklamy z administrace Wordpress.</p><p>Prosím <a href="' . get_bloginfo('siteurl').'/wp-admin/widgets.php' . '">umístěte</a> widget <b>Endora reklama</b>, který zajistí správné vložení reklamy. Pak bude možné pokračovat...</p></div>';
-} else { 
+} else {
 $data = get_option('endora_reklama');
 if(!is_array($data)) {
 	$data = array('barva1'=>'#FF0000', 'barva2'=>'#00FF00', 'barva3'=>'#0000FF', 'velikost'=>14);
@@ -67,7 +67,7 @@ if($_POST['endora_submit_reklama']) {
 	<p><input type="submit" class="button-primary" name="endora_submit_reklama"  value="<?php _e('Uložit') ?>" /></p>
 </form>
 <?php if($data['upraveno']==NULL || $data['upraveno']=='ano') { ?>
-<div id="message" class="updated"><p>Pokud je reklama nastavena v administračním rozhraní Endory, nastavení na této stránce <strong>nebude</strong> fungovat!<span style="float: right;">( <a href="?page=endora/endora.php&tab=reklama&zobraz=ne">tuto zprávu příště nezobrazovat</a> )</span></p><p><a class="button-secondary" href="https://webadmin.endora.cz/" target="_blank" title="Administrace">Ručně deaktivovat reklamu v administraci Endora!</a></p><p>Deaktivování znamená v administraci nastavit:<br />1) používat styl webu<br />2) <b>necentrovat</b> reklamu<br />3) vkládat reklamní patu</p></div>
+<div id="message" class="updated"><p>Pokud je reklama nastavena v administračním rozhraní Endory, nastavení na této stránce <strong>nebude</strong> fungovat!<span style="float: right;">( <a href="?page=endora-lite/endora.php&tab=reklama&zobraz=ne">tuto zprávu příště nezobrazovat</a> )</span></p><p><a class="button-secondary" href="https://webadmin.endora.cz/" target="_blank" title="Administrace">Ručně deaktivovat reklamu v administraci Endora!</a></p><p>Deaktivování znamená v administraci nastavit:<br />1) používat styl webu<br />2) <b>necentrovat</b> reklamu<br />3) vkládat reklamní patu</p></div>
 <?php } ?>
 <h2>Reálný náhled reklamy</h2>
 <iframe src="<?php echo get_bloginfo('siteurl'); ?>" width="100%" height="300"></iframe>

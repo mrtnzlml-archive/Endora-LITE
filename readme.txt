@@ -23,7 +23,7 @@ Obsazené místo / Maximální prostor pro web na disku, traffic webu a jeho max
 
 == Installation ==
 
-1. Nahrajte složku `/endora/` do `/wp-content/plugins/`
+1. Nahrajte složku `/endora-lite/` do `/wp-content/plugins/`
 2. Aktivujte plugin v menu Wordpressu
 3. Umístěte widget vkládající reklamu do šablony webu
 4. Plugin nastavte, a uložte hodnoty
@@ -32,27 +32,5 @@ Obsazené místo / Maximální prostor pro web na disku, traffic webu a jeho max
 
 == Changelog ==
 
-= 20.02.2012 =
-* Verze 1.*.stable překlopena na 20.02.2012
-* Změna číslování verzí
-* Přidáno Endora RSS
-* Přidáno rozhraní využívající Endora API
-* Nově dva dashboard widgety
-* Widget Endora informace
-
-= 1.*.stable =
-* Verze 0b5 překlopena na 1.0.stable
-* Přidána možnost RSS archivu novinek Endora
-* Přidán widget umožňující zobrazit informace o webu vzhledem k hostingu
-* Přidán dashboard RSS widget
-* Změna verzování podle data
-
-= 0b* =
-* Přidání menu nastavení
-* Přidána možnost widgetu
-* Přidán reálný náhled reklamy
-* Nastavení barvy textu a pozadí
-* Nastavení písma a jeho velikosti
-* Nastavení zarovnání reklamy
-* Přidána nápověda
-* další drobné opravy a úpravy
+= 20.09.2012 =
+* ...
