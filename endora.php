@@ -62,8 +62,8 @@ function endora_widget_rklm($args) {
 	$title = get_option(ENDORA_WIDGET_ID1);
 	echo $title['title'];
 	echo $after_title;
-	//echo '<script>window.onload = scroll;</script><div id="rklm-wplugin"><endora></div>';
-	echo '<script>window.onload = scroll;</script><div id="rklm-wplugin">SMA <a>odkaz</a> ZAT</div>';
+	echo '<script>window.onload = scroll;</script><div id="rklm-wplugin"><endora></div>';
+	//echo '<script>window.onload = scroll;</script><div id="rklm-wplugin">SMA <a>odkaz</a> ZAT</div>';
 	echo $after_widget;
 }
 
