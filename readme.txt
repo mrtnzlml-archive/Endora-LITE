@@ -1,12 +1,12 @@
 ﻿=== Plugin Name ===
 Contributors: zeminem
 Donate link: http://www.zeminem.cz/
-Tags: endora, freehosting, widget, plugin, reklama
-Requires at least: 2.7
+Tags: endora, freehosting, widget, plugin, reklama, lite
+Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 20.09.2012
+Stable tag: 21.09.2012
 
-Umožňuje jednoduché ovládání a editaci reklamy, kterou vkládá freehosting Endora.
+Odlehčená verze pluginu, který umožňuje jednoduché ovládání a editaci reklamy, kterou vkládá freehosting Endora.
 
 == Description ==
 
@@ -17,9 +17,7 @@ Plugin umožňuje jednoduchou editaci celkového vzhledu reklamního textu.
 Změna barvy textu, změna barvy pozadí, změna barvy odkazů, změna velikosti písma, změna písma (celkem 5 druhů), zarovnání reklamy...
 
 Při úpravách je okamžitě vidět <b>reálný</b> náhled editované reklamy.
-Jako bonus je přidán archiv Endora novinek a přehled informací o hostovaném webu. Tyto informace je také možno umístit na web jako widget. Stejně jako u widgetu, který vkládá reklamu, je zde zaručena celková editace vzhledu.
-Zobrazují se následující informace:
-Obsazené místo / Maximální prostor pro web na disku, traffic webu a jeho maximální mez, hosting program a čas jeho případné expirace...
+Plugin Endora Lite má v režii pouze vkládanou reklamu. Hodí se proto pro uživatele, kteří nechtějí rozšiřující možnosti pluginu <a href="http://wordpress.org/extend/plugins/endora/">Endora</a>, ale potřebují ušetřit místo a traffic.
 
 == Installation ==
 
@@ -27,10 +25,8 @@ Obsazené místo / Maximální prostor pro web na disku, traffic webu a jeho max
 2. Aktivujte plugin v menu Wordpressu
 3. Umístěte widget vkládající reklamu do šablony webu
 4. Plugin nastavte, a uložte hodnoty
-5. Volitelně můžete umístit na web widget vkládající obecné informace "hosting vs. web"
-6. I tento plugin nastavte a uložte hodnoty
 
 == Changelog ==
 
-= 20.09.2012 =
-* ...
+= 21.09.2012 =
+* Uvolněna první verze Endora Lite (stejné jako Endora, ale stará se pouze o reklamu)

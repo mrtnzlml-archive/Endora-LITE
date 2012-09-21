@@ -1,12 +1,14 @@
-﻿<h2>Nastavení reklamy</h2>
-<?php if(!is_active_widget(false, false, ENDORA_WIDGET_ID1, false)) { echo '<div id="message" class="error"><p>Byla zjištěna chyba, která nedovoluje zobrazit nastavení reklamy z administrace Wordpress.</p><p>Prosím <a href="' . get_bloginfo('siteurl').'/wp-admin/widgets.php' . '">umístěte</a> widget <b>Endora reklama</b>, který zajistí správné vložení reklamy. Pak bude možné pokračovat...</p></div>';
-} else {
-$data = get_option('endora_reklama');
+﻿<div class="wrap">
+<h2>Nastavení reklamy</h2>
+<?php if(!is_active_widget(false, false, ENDORA_WIDGET_ID1, false)) : echo '<div id="message" class="error"><p>Byla zjištěna chyba, která nedovoluje zobrazit nastavení reklamy z administrace Wordpress.</p><p>Prosím <a href="' . get_bloginfo('siteurl').'/wp-admin/widgets.php' . '">umístěte</a> widget <b>Endora reklama</b>, který zajistí správné vložení reklamy. Pak bude možné pokračovat...</p></div>';
+else:
+
+$data = get_option('endora_rklm');
 if(!is_array($data)) {
 	$data = array('barva1'=>'#FF0000', 'barva2'=>'#00FF00', 'barva3'=>'#0000FF', 'velikost'=>14);
-	update_option('endora_reklama', $data);
+	update_option('endora_rklm', $data);
 }
-if($_POST['endora_submit_reklama']) {
+if($_POST['endora_submit_rklm']) {
 	$data['barva1'] = $_POST['endora_barva1'];
 	$data['barva2'] = $_POST['endora_barva2'];
 	$data['barva3'] = $_POST['endora_barva3'];
@@ -15,9 +17,8 @@ if($_POST['endora_submit_reklama']) {
 	$data['pismo'] = $_POST['endora_pismo'];
 	$data['transparent'] = $_POST['endora_transparent'];
 	if($data['barva3']==$data['barva1'] || $data['barva3']==$data['barva2']) echo '<div id="message" class="error"><p>Barva pozadí nemůže být stejná jako barva odkazů, nebo textu.</p></div>';
-	else update_option('endora_reklama', $data);
-}
-?>
+	else update_option('endora_rklm', $data);
+} ?>
 <form method="post">
 	<table>
 		<tr>
@@ -64,12 +65,22 @@ if($_POST['endora_submit_reklama']) {
 					?></td>
 		</tr>
 	</table>
-	<p><input type="submit" class="button-primary" name="endora_submit_reklama"  value="<?php _e('Uložit') ?>" /></p>
+	<p><input type="submit" class="button-primary" name="endora_submit_rklm"  value="<?php _e('Uložit') ?>" /></p>
 </form>
-<?php if($data['upraveno']==NULL || $data['upraveno']=='ano') { ?>
-<div id="message" class="updated"><p>Pokud je reklama nastavena v administračním rozhraní Endory, nastavení na této stránce <strong>nebude</strong> fungovat!<span style="float: right;">( <a href="?page=endora-lite/endora.php&tab=reklama&zobraz=ne">tuto zprávu příště nezobrazovat</a> )</span></p><p><a class="button-secondary" href="https://webadmin.endora.cz/" target="_blank" title="Administrace">Ručně deaktivovat reklamu v administraci Endora!</a></p><p>Deaktivování znamená v administraci nastavit:<br />1) používat styl webu<br />2) <b>necentrovat</b> reklamu<br />3) vkládat reklamní patu</p></div>
-<?php } ?>
+
 <h2>Reálný náhled reklamy</h2>
 <iframe src="<?php echo get_bloginfo('siteurl'); ?>" width="100%" height="300"></iframe>
-<div id="message" class="updated"><p>Nereaguje reklama na změny? Přesvědčte se, že máte v administraci Endora vypnuté nastavení reklamy a nastavujete ji pouze pomocí toho pluginu.<br />Našli jste chybu? <b>Nebojte se</b> to oznámit na email <b>mrtnzlml@gmail.com</b>. Na opravě se pak bude rychle pracovat, ale musím o ní vědět.</p></div>
-<?php } //!is_active_widget() ?>
+
+<?php endif; //!is_active_widget() ?>
+
+<p><a target="_blank" href="https://flattr.com/submit/auto?
+  user_id=mrtnzlml&url=<?php echo get_bloginfo('siteurl').'='.get_bloginfo('name').'='.get_bloginfo('version'); ?>&
+  title=Endora Lite&
+  description=Endora Lite - šikovný plugin umožňující jednoduchou a rychlou editaci reklamy&
+  language=cs_CZ&category=software">
+
+<img src="https://api.flattr.com/button/flattr-badge-large.png" 
+  alt="Flattr this plugin!" />
+</a></p>
+
+</div><!--/wrap-->
